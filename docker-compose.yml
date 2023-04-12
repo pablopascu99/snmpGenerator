@@ -1,0 +1,10 @@
+version: '3'
+services:
+  agent:
+    build:
+      context: .
+      dockerfile: agent/Dockerfile
+  receptor:
+    build:
+      context: .
+      dockerfile: receptor/Dockerfile
