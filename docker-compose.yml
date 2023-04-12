@@ -4,7 +4,14 @@ services:
     build:
       context: .
       dockerfile: agent/Dockerfile
+    networks:
+      - conex
   receptor:
     build:
       context: .
       dockerfile: receptor/Dockerfile
+    networks:
+      - conex
+networks:
+  conex:
+    driver: bridge
